@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS While Loop</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <ul id="myul">
+
+        </ul>
+        
+        <script>
+            // Take username and How many time to greet
+
+            let myul = document.getElementById("myul");
+            console.log(myul);
+
+            let name = prompt('Enter your name ?');
+            let noTime = prompt('How many times to greet ?')
+
+            //TypeCasting
+
+            // String -> Number
+            noTime = parseInt(noTime)
+            console.log(name);
+            console.log(typeof noTime);
+
+            /*
+                while (condition) {
+                    // code block to be executed
+                }
+            */
+            let i=1;
+            /*
+            while(i<=noTime){
+                console.log(`HI ${name} `);
+                myul.innerHTML += `<li>HI ${name} </li>`;
+                i++; //post increment operator ++
+            }
+            */
+
+            do{
+                myul.innerHTML += `<li>HI ${name} </li>`;
+                i++;
+            }while(i<=noTime)
+        </script>
+    </body>
+</html>
